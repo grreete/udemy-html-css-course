@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 h1 {
     color: rgb(243, 243, 243);
     text-align: center;
@@ -11,9 +13,9 @@ h1 {
 
 }
 
-body{
-    background-color: #494D5F;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background-color: #242424;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -30,7 +32,7 @@ body{
 }
 
 .navbar li {
-    width: 100px;
+    width: 22%;
     display: inline-block;
     line-height: 40px;
     color: #fff;
@@ -68,49 +70,67 @@ body{
 
 /* pilt ja div */
 
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 50px;
+}
+
 #highlight {
     color: rgb(75, 75, 75);
     float: left;
-    width: 500px;
+    width: 700px;
+    max-width: 90%;
+    height: auto;
     /* #FF0000; rgb(255,0,0) red */
     /* #00FF00; rgb(0,255,0) green */
     /* #0000FF; rgb(0,0,255) blue */
     /* rgba(0,0,255,0.1) opacity */
 }
 
-.container {
+img {
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* tekstiväli ja tabel */
+
+.section2 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-}
-
-img {
-    width: 500px;
-    height: 200px;
-    border-radius: 10px;
-    margin: 10px;
-    object-fit: cover;
+    margin-top: 50px;
+    gap: 50px;
 }
 
 .green {
+    float: left;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    width: 98%;
-    height: 100px;
     border-radius: 15px;
-    margin: 10px;
     border: none;
+    margin: 10px;
+    width: 700px;
+    max-width: 90%;
+    height: 200px;
+    max-height: 100%;
 }
 
-/* tabel */
 table,td {
   border: 0.5px solid #ccc;
   color: #c4c4c4;
 }
 
 table {
-    min-width: 300px;
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+    float: right;
 }
 
 td {
@@ -119,8 +139,8 @@ td {
 }
 
 th {
-    background-color: #949494;
-    color: rgb(3, 3, 3);
+    background-color: #757575;
+    color: rgb(233, 233, 233);
 }
 
 /* kontaktivorm */
@@ -142,6 +162,7 @@ input {
 #contact input[type="text"],
 #contact input[type="email"] {
     width: 100%;
+    padding: 10px;
     border-radius: 5px;
     border: 1px;
     border-color: #474747;
@@ -164,6 +185,25 @@ input {
     padding: 20px;
     background-color: black;
     color: #f1f1f1;
+    width: 100%;
   }
 
+  @media only screen and (max-width:900px) {
+    body {}
+    .navbar li {
+        line-height: 40px;
+    }
+    img {
+        padding: 0px;
+    }
 
+    .section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
